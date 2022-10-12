@@ -9,5 +9,12 @@ driver.get("https://shop.thetestingworld.com/")
 
 driver.find_element(By.XPATH, "//input[@name='search']").send_keys('Mac')
 driver.find_element(By.CSS_SELECTOR, ".btn.btn-default.btn-lg").click()
-
+x = 0
 products = driver.find_elements(By.CSS_SELECTOR, ".product-layout")
+
+for product in products:
+    product.find_element(By.CSS_SELECTOR, "h4").text
+    print(product)
+
+
+
